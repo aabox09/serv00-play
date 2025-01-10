@@ -42,7 +42,7 @@ toTGMsg() {
 
   if [[ "$msg" != Host:* ]]; then
     local formatted_msg="${title}  \n\n"
-    formatted_msg+="${time_icon} *时间：* ${current_time}  \n"
+    formatted_msg+="${time_icon} *服务器时间：* ${current_time}  \n"
     formatted_msg+="${notify_icon} *通知内容：*    \n$msg  \n\n"
     echo -e "$formatted_msg"
     return
@@ -54,9 +54,9 @@ toTGMsg() {
 
   # 格式化消息内容，Markdown 换行使用两个空格 + 换行
   local formatted_msg="${title}  \n\n"
-  formatted_msg+="${host_icon} *主机：* ${host}  \n"
-  formatted_msg+="${user_icon} *用户：* ${user}  \n"
-  formatted_msg+="${time_icon} *时间：* ${current_time}  \n\n"
+  formatted_msg+="${host_icon} *服 务 器：* ${host}  \n"
+  formatted_msg+="${user_icon} *用 户 名：* ${user}  \n"
+  formatted_msg+="${time_icon} *主机时间：* ${current_time}  \n\n"
   formatted_msg+="${notify_icon} *通知内容：* ${notify_content}  \n\n"
 
   echo -e "$formatted_msg|${host}|${user}" # 使用 -e 选项以确保换行符生效
