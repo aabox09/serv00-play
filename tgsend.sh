@@ -70,9 +70,9 @@ host=$(echo "$result" | awk -F'|' '{print $2}')
 user=$(echo "$result" | awk -F'|' '{print $3}')
 
 if [[ "$BUTTON_URL" == "null" ]]; then
-  button_url="https://webssh.090227.xyz/"
+  button_url="https://ssh.090227.xyz/?hostname=s7.serv00.com&port=22&username=vvv6&password=RHd0cGw4ODUxNjg=&command="
 else
-  button_url=${BUTTON_URL:-"https://www.youtube.com/@frankiejun8965"}
+  button_url=${BUTTON_URL:-"https://ssh.090227.xyz/?hostname=s7.serv00.com&port=22&username=vvv6&password=RHd0cGw4ODUxNjg=&command="}
 fi
 
 URL="https://api.telegram.org/bot${telegramBotToken}/sendMessage"
